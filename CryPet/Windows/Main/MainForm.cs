@@ -13,7 +13,7 @@ namespace CryPet.Windows.Main
 {
     public partial class MainForm : Form
     {
-        public int UserId {  get; set; }
+        public int UserId { get; set; }
         public MainForm()
         {
             InitializeComponent();
@@ -23,13 +23,17 @@ namespace CryPet.Windows.Main
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            
-            
+
+
         }
 
         private void MainForm_Activated(object sender, EventArgs e)
         {
+
+
             MiniProfile.FillProfile(UserId);
+
+
         }
 
         private void btnMain_Click(object sender, EventArgs e)

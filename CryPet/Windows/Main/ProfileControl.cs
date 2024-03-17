@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CryPet.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace CryPet.Windows.Main
         public ProfileControl()
         {
             InitializeComponent();
+        }
+
+        private async void btnSaveSettings_Click(object sender, EventArgs e)
+        {
+            User user = new User();
+            await user.UpdateDataUser(12, txbLastName.Text, txbFirstName.Text, txbMiddleName.Text);
         }
     }
 }

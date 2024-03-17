@@ -10,15 +10,14 @@ namespace CryPet.Windows.Main
        
         public MiniProfile()
         {
-            InitializeComponent();
-          
+            InitializeComponent();          
         }
         public async void FillProfile(int userId)
         {
             User user = new User();
-            var result = await user.FillMiniProfile(userId, lblNameUser.Text, lblBalanceUser.Text);
-            lblNameUser.Text = result.Item1;
-            lblBalanceUser.Text = result.Item2 + " $";
+            var result = await user.FillMiniProfile(userId);
+            lblNameUser.Text = result.lastname;
+            lblBalanceUser.Text = result.balance;
 
         }
         public Image PhotoUser

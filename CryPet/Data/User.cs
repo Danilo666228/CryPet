@@ -2,6 +2,7 @@
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -19,19 +20,33 @@ namespace CryPet.Data
         public string Password { get; set; }
         public decimal Balance { get; set; } = 0;
 
-        
-        public async Task<Tuple<string,string>> FillMiniProfile(int userId,string lastname,string balance)
+
+        public async Task<(string lastname, string balance)> FillMiniProfile(int userId)
         {
-            using(ConnectDb db = new ConnectDb())
+            using (ConnectDb db = new ConnectDb())
             {
                 User user = await Task.Run(() => db.Users.FirstOrDefaultAsync(x => x.Id == userId));
                 if (user != null)
                 {
-                    lastname = user.LastName;
-                    balance = user.Balance.ToString();
+                    return (user.LastName, user.Balance.ToString());
                 }
-                return Tuple.Create(lastname,balance);
-                
+                return (null, null);
+            }
+        }
+        public async Task UpdateDataUser(int userId, string lastname, string firstname, string middlename)
+        {
+            using (ConnectDb db = new ConnectDb())
+            {
+                User user = await Task.Run(() => db.Users.FirstOrDefaultAsync(a => a.Id == userId));
+                if (user != null)
+                {
+                    user.LastName = lastname;
+                    user.FirstName = firstname;
+                    user.MiddleName = middlename;
+                    await db.SaveChangesAsync();
+                    MessageBox.Show("Данные успешно сохранены");
+                }
+
             }
         }
         public async Task<string> GetUserName(int userId)
@@ -39,7 +54,7 @@ namespace CryPet.Data
             using (ConnectDb db = new ConnectDb())
             {
                 User user = await Task.Run(() => db.Users.FirstOrDefaultAsync(a => a.Id == userId));
-                if(user != null)
+                if (user != null)
                 {
                     return user.LastName;
                 }
@@ -81,6 +96,6 @@ namespace CryPet.Data
                 return ExistUser.Id;
             }
         }
-        
+
     }
 }
