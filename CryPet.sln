@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryPet", "CryPet\CryPet.csproj", "{621003E2-9D62-4320-A58F-4F42FE987FD4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{621003E2-9D62-4320-A58F-4F42FE987FD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{621003E2-9D62-4320-A58F-4F42FE987FD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{621003E2-9D62-4320-A58F-4F42FE987FD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{621003E2-9D62-4320-A58F-4F42FE987FD4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1189A96D-8CEB-4AF0-AC19-F5B6B890881B}
+	EndGlobalSection
+EndGlobal
