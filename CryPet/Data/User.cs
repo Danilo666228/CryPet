@@ -49,6 +49,18 @@ namespace CryPet.Data
 
             }
         }
+        public async Task<(string lastname,string firstname,string middlename)> LoadDataUser(int userId)
+        {
+            using(ConnectDb db = new ConnectDb())
+            {
+                User user = await Task.Run(() => db.Users.FirstOrDefaultAsync(a => a.Id == userId));
+                if(user != null)
+                {
+                    return (user.LastName,user.FirstName,user.MiddleName);
+                }
+                return (null,null,null);
+            }
+        }
         public async Task<string> GetUserName(int userId)
         {
             using (ConnectDb db = new ConnectDb())

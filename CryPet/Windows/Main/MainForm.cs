@@ -23,7 +23,7 @@ namespace CryPet.Windows.Main
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-
+            ProfileControl.UserId = UserId;
 
         }
 
@@ -32,7 +32,7 @@ namespace CryPet.Windows.Main
 
 
             MiniProfile.FillProfile(UserId);
-
+            ProfileControl.FillProfileData();
 
         }
 
