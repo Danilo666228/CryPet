@@ -32,18 +32,18 @@
             this.GradientPanel = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.lblFullName = new System.Windows.Forms.Label();
-            this.lbl = new System.Windows.Forms.Label();
+            this.lblShortName = new System.Windows.Forms.Label();
             this.lblPrice = new System.Windows.Forms.Label();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pcbIconCoin = new Guna.UI2.WinForms.Guna2PictureBox();
             this.GradientPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbIconCoin)).BeginInit();
             this.SuspendLayout();
             // 
             // GradientPanel
             // 
-            this.GradientPanel.Controls.Add(this.guna2PictureBox1);
+            this.GradientPanel.Controls.Add(this.pcbIconCoin);
             this.GradientPanel.Controls.Add(this.lblPrice);
-            this.GradientPanel.Controls.Add(this.lbl);
+            this.GradientPanel.Controls.Add(this.lblShortName);
             this.GradientPanel.Controls.Add(this.lblFullName);
             this.GradientPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GradientPanel.Location = new System.Drawing.Point(0, 0);
@@ -67,16 +67,16 @@
             this.lblFullName.TabIndex = 0;
             this.lblFullName.Text = "Имя";
             // 
-            // lbl
+            // lblShortName
             // 
-            this.lbl.AutoSize = true;
-            this.lbl.BackColor = System.Drawing.Color.Transparent;
-            this.lbl.Font = new System.Drawing.Font("JetBrains Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lbl.Location = new System.Drawing.Point(17, 84);
-            this.lbl.Name = "lbl";
-            this.lbl.Size = new System.Drawing.Size(45, 25);
-            this.lbl.TabIndex = 0;
-            this.lbl.Text = "Имя";
+            this.lblShortName.AutoSize = true;
+            this.lblShortName.BackColor = System.Drawing.Color.Transparent;
+            this.lblShortName.Font = new System.Drawing.Font("JetBrains Mono", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblShortName.Location = new System.Drawing.Point(17, 84);
+            this.lblShortName.Name = "lblShortName";
+            this.lblShortName.Size = new System.Drawing.Size(45, 25);
+            this.lblShortName.TabIndex = 0;
+            this.lblShortName.Text = "Имя";
             // 
             // lblPrice
             // 
@@ -89,18 +89,18 @@
             this.lblPrice.TabIndex = 0;
             this.lblPrice.Text = "Цена";
             // 
-            // guna2PictureBox1
+            // pcbIconCoin
             // 
-            this.guna2PictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2PictureBox1.BorderRadius = 10;
-            this.guna2PictureBox1.FillColor = System.Drawing.Color.Gray;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(8, 6);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2PictureBox1.TabIndex = 1;
-            this.guna2PictureBox1.TabStop = false;
+            this.pcbIconCoin.BackColor = System.Drawing.Color.Transparent;
+            this.pcbIconCoin.BorderRadius = 10;
+            this.pcbIconCoin.FillColor = System.Drawing.Color.Gray;
+            this.pcbIconCoin.ImageRotate = 0F;
+            this.pcbIconCoin.Location = new System.Drawing.Point(8, 6);
+            this.pcbIconCoin.Name = "pcbIconCoin";
+            this.pcbIconCoin.Size = new System.Drawing.Size(50, 50);
+            this.pcbIconCoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbIconCoin.TabIndex = 1;
+            this.pcbIconCoin.TabStop = false;
             // 
             // CoinPanel
             // 
@@ -111,7 +111,7 @@
             this.Size = new System.Drawing.Size(306, 132);
             this.GradientPanel.ResumeLayout(false);
             this.GradientPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbIconCoin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -120,9 +120,9 @@
 
         private Guna.UI2.WinForms.Guna2CustomGradientPanel GradientPanel;
         private System.Windows.Forms.Label lblPrice;
-        private System.Windows.Forms.Label lbl;
+        private System.Windows.Forms.Label lblShortName;
         private System.Windows.Forms.Label lblFullName;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2PictureBox pcbIconCoin;
     }
 }

@@ -71,8 +71,18 @@
     <Compile Include="Data\Coin.cs" />
     <Compile Include="Data\ConnectDb.cs" />
     <Compile Include="Data\User.cs" />
+    <Compile Include="Migrations\202403151826332_InitialCreate.cs" />
+    <Compile Include="Migrations\202403151826332_InitialCreate.Designer.cs">
+      <DependentUpon>202403151826332_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403181903472_Coin.cs" />
+    <Compile Include="Migrations\202403181903472_Coin.Designer.cs">
+      <DependentUpon>202403181903472_Coin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\UpdatePriceCoin.cs" />
     <Compile Include="Validate.cs" />
     <Compile Include="Windows\Authorized\AuthorizedForm.cs">
       <SubType>Form</SubType>
@@ -122,6 +132,12 @@
     <Compile Include="Windows\Registration\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Migrations\202403151826332_InitialCreate.resx">
+      <DependentUpon>202403151826332_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403181903472_Coin.resx">
+      <DependentUpon>202403181903472_Coin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

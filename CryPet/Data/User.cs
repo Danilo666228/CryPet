@@ -20,7 +20,7 @@ namespace CryPet.Data
         public string Password { get; set; }
         public decimal Balance { get; set; } = 0;
 
-
+        
         public async Task<(string lastname, string balance)> FillMiniProfile(int userId)
         {
             using (ConnectDb db = new ConnectDb())
@@ -61,18 +61,18 @@ namespace CryPet.Data
                 return (null,null,null);
             }
         }
-        public async Task<string> GetUserName(int userId)
-        {
-            using (ConnectDb db = new ConnectDb())
-            {
-                User user = await Task.Run(() => db.Users.FirstOrDefaultAsync(a => a.Id == userId));
-                if (user != null)
-                {
-                    return user.LastName;
-                }
-                return null;
-            }
-        }
+        //public async Task<string> GetUserName(int userId)
+        //{
+        //    using (ConnectDb db = new ConnectDb())
+        //    {
+        //        User user = await Task.Run(() => db.Users.FirstOrDefaultAsync(a => a.Id == userId));
+        //        if (user != null)
+        //        {
+        //            return user.LastName;
+        //        }
+        //        return null;
+        //    }
+        //}
         public async Task<bool> AddUser(string lastName, string firstName, string middleName, string login, string password)
         {
             using (ConnectDb db = new ConnectDb())

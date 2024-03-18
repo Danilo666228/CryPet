@@ -16,5 +16,13 @@ namespace CryPet.Windows.Main
         {
             InitializeComponent();
         }
+        public async Task UpdatePanelCoin()
+        {
+            await CoinPanelBTC.LoadPriceCoin();
+            await CoinPanelETH.LoadPriceCoin();
+            await CoinPanelBNB.LoadPriceCoin();
+            await UpdatePanelCoin();
+        }
+
     }
 }

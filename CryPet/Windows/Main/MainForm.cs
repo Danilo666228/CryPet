@@ -1,4 +1,5 @@
-﻿using CryPet.Windows.Authorized;
+﻿using CryPet.Service;
+using CryPet.Windows.Authorized;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,9 +27,16 @@ namespace CryPet.Windows.Main
             ProfileControl.UserId = UserId;
 
         }
+        public async void UpdatePrice()
+        {
+            UpdatePriceCoin update = new UpdatePriceCoin();
+            update.StartUpdating("BTC", "ETH", "BNB");
+            await MainControl.UpdatePanelCoin();
 
+        }
         private void MainForm_Activated(object sender, EventArgs e)
         {
+            UpdatePrice();
             MiniProfile.FillProfile(UserId);
             ProfileControl.FillProfileData();
         }
