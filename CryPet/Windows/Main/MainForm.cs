@@ -29,11 +29,8 @@ namespace CryPet.Windows.Main
 
         private void MainForm_Activated(object sender, EventArgs e)
         {
-
-
             MiniProfile.FillProfile(UserId);
             ProfileControl.FillProfileData();
-
         }
 
         private void btnMain_Click(object sender, EventArgs e)

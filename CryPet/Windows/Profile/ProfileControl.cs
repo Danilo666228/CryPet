@@ -17,6 +17,7 @@ namespace CryPet.Windows.Main
         public ProfileControl()
         {
             InitializeComponent();
+
         }
         public async void FillProfileData()
         {
@@ -31,5 +32,7 @@ namespace CryPet.Windows.Main
             User user = new User();
             await user.UpdateDataUser(UserId, txbLastName.Text, txbFirstName.Text, txbMiddleName.Text);
         }
+
+       
     }
 }

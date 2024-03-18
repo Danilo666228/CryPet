@@ -68,6 +68,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Coin.cs" />
     <Compile Include="Data\ConnectDb.cs" />
     <Compile Include="Data\User.cs" />
     <Compile Include="Program.cs" />
@@ -78,6 +79,12 @@
     </Compile>
     <Compile Include="Windows\Authorized\AuthorizedForm.Designer.cs">
       <DependentUpon>AuthorizedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\Main\CoinPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Windows\Main\CoinPanel.Designer.cs">
+      <DependentUpon>CoinPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Main\MainControl.cs">
       <SubType>UserControl</SubType>
@@ -91,10 +98,10 @@
     <Compile Include="Windows\Main\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Main\MarketControl.cs">
+    <Compile Include="Windows\Market\MarketControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\Main\MarketControl.Designer.cs">
+    <Compile Include="Windows\Market\MarketControl.Designer.cs">
       <DependentUpon>MarketControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Main\MiniProfile.cs">
@@ -103,10 +110,10 @@
     <Compile Include="Windows\Main\MiniProfile.Designer.cs">
       <DependentUpon>MiniProfile.cs</DependentUpon>
     </Compile>
-    <Compile Include="Windows\Main\ProfileControl.cs">
+    <Compile Include="Windows\Profile\ProfileControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Windows\Main\ProfileControl.Designer.cs">
+    <Compile Include="Windows\Profile\ProfileControl.Designer.cs">
       <DependentUpon>ProfileControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Windows\Registration\RegistrationForm.cs">
@@ -128,19 +135,22 @@
     <EmbeddedResource Include="Windows\Authorized\AuthorizedForm.resx">
       <DependentUpon>AuthorizedForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Windows\Main\CoinPanel.resx">
+      <DependentUpon>CoinPanel.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Windows\Main\MainControl.resx">
       <DependentUpon>MainControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Main\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Main\MarketControl.resx">
+    <EmbeddedResource Include="Windows\Market\MarketControl.resx">
       <DependentUpon>MarketControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Main\MiniProfile.resx">
       <DependentUpon>MiniProfile.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Windows\Main\ProfileControl.resx">
+    <EmbeddedResource Include="Windows\Profile\ProfileControl.resx">
       <DependentUpon>ProfileControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Windows\Registration\RegistrationForm.resx">
@@ -160,10 +170,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Windows\Market\" />
-    <Folder Include="Windows\Profile\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\Фон.jpg" />
   </ItemGroup>
